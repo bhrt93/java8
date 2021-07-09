@@ -1,0 +1,66 @@
+Java 8 Features
+forEach() method in Iterable interface
+default and static methods in Interfaces
+Functional Interfaces and Lambda Expressions
+Java Stream API for Bulk Data Operations on Collections
+Java Time API
+Collection API improvements
+Concurrency API improvements
+Java IO improvements
+Miscellaneous Core API improvements
+
+forEach() method in Iterable interface
+Iterator vs forEach -> Syntactic sugar except that an Iterator can remove items from the Collection it is iterating, but foreach cannot.
+Java 8 has introduced forEach method in java.lang.Iterable interface so that while writing code we focus on business logic.
+
+Why default method?
+If several classes implement an interface and we want to add a new method to the interface. Then, we can add these default methods to existing interfaces without breaking the code.
+Purpose: Backward compatibility is adding new features without breaking the old code.
+Static methods in interfaces are similar to the default methods except that we cannot override these methods in the classes that implements these interfaces.
+
+Functional Interfaces and Lambda Expressions
+An interface with exactly one abstract method is a Functional Interface.
+Lambda expressions are a means to create anonymous classes of functional interfaces easily.
+
+Stream API
+A new java.util.stream has been added in Java 8 to perform filter/map/reduce like operations with the collection.
+Stream API will allow sequential as well as parallel execution.
+Collection interface has been extended with stream() and parallelStream() default methods to get the Stream for sequential and parallel execution.
+
+Time API
+java.time package that will streamline the process of working with time in java.
+
+Collection API improvements
+Iterator default method forEachRemaining(Consumer action) to perform the given action for each remaining element until all elements have been processed or the action throws an exception.
+Collection default method removeIf(Predicate filter) to remove all of the elements of this collection that satisfy the given predicate.
+Collection spliterator() method returning Spliterator instance that can be used to traverse elements sequentially or parallel.
+Map replaceAll(), compute(), merge() methods.
+Performance Improvement for HashMap-HashMap replaces linked list with a binary tree when the number of elements in a bucket reaches certain threshold. While converting the list to binary tree, hashcode is used as a branching variable.
+
+Concurrency API improvements
+Some important concurrent API enhancements are:
+
+ConcurrentHashMap compute(), forEach(), forEachEntry(), forEachKey(), forEachValue(), merge(), reduce() and search() methods.
+CompletableFuture that may be explicitly completed (setting its value and status).
+Executors newWorkStealingPool() method to create a work-stealing thread pool using all available processors as its target parallelism level.
+
+Java-9
+
+Interface allows us to declare private methods that help to share common code between non-abstract methods.
+
+
+Java-11
+Running Java File with single command
+Java String Methods
+Local-Variable Syntax for Lambda Parameters
+Nested Based Access Control
+4.5 4.5) JEP 309: Dynamic Class-File Constants
+4.6 4.6) JEP 318: Epsilon: A No-Op Garbage Collector
+4.7 4.7) JEP 320: Remove the Java EE and CORBA Modules
+4.8 4.8) JEP 328: Flight Recorder
+4.9 4.9) JEP 321: HTTP Client
+4.10 4.10) Reading/Writing Strings to and from the Files
+4.11 4.11) JEP 329: ChaCha20 and Poly1305 Cryptographic Algorithms
+4.12 4.12) JEP 315: Improve Aarch64 Intrinsics
+4.13 4.13) JEP 333: ZGC: A Scalable Low-Latency Garbage Collector (Experimental)
+4.14 4.14) JEP 335: Deprecate the Nashorn JavaScript Engine
